@@ -88,8 +88,8 @@ RUN chmod +x /usr/local/bin/docker-entrypoint
 
 ENTRYPOINT ["docker-entrypoint"]
 CMD ["php-fpm"]
-
-FROM nginx:${NGINX_VERSION}-alpine AS api_platform_nginx
+#FROM nginx:${NGINX_VERSION}-alpine AS api_platform_nginx
+FROM bitnami/nginx:latest AS api_platform_nginx
 
 COPY docker/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
 
