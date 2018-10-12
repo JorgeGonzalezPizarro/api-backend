@@ -5,7 +5,7 @@ ARG PHP_VERSION=7.2
 ARG NGINX_VERSION=1.15
 ARG VARNISH_VERSION=6.0
 
-FROM php:${PHP_VERSION}-fpm-alpine AS api_platform_php
+FROM php:7.2-fpm-alpine AS api_platform_php
 
 # persistent / runtime deps
 RUN apk add --no-cache \
@@ -89,7 +89,7 @@ RUN chmod +x /usr/local/bin/docker-entrypoint
 ENTRYPOINT ["docker-entrypoint"]
 CMD ["php-fpm"]
 #FROM nginx:${NGINX_VERSION}-alpine AS api_platform_nginx
-FROM bitnami/nginx:latest 
+FROM bitnami/nginx:latest
 
 COPY docker/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
 
