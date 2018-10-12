@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f21eb480-4a4f-461a-808c-a699befda7a3" name="Default Changelist" comment="" />
+    <list default="true" id="f21eb480-4a4f-461a-808c-a699befda7a3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/docker/nginx/conf.d/default.conf" beforeDir="false" afterPath="$PROJECT_DIR$/docker/nginx/conf.d/default.conf" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +32,7 @@
           <entry key="lock" value="1" />
           <entry key="php" value="3" />
           <entry key="twig" value="1" />
+          <entry key="vcl" value="1" />
           <entry key="yaml" value="7" />
         </counts>
       </usages-collector>
@@ -39,7 +42,7 @@
           <entry key="Dockerfile" value="2" />
           <entry key="Ini" value="1" />
           <entry key="PHP" value="4" />
-          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="PLAIN_TEXT" value="4" />
           <entry key="SmartyConfig" value="1" />
           <entry key="Twig" value="1" />
           <entry key="YAML" value="7" />
@@ -48,14 +51,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Dockerfile" value="15" />
-          <entry key="conf" value="5" />
+          <entry key="conf" value="10" />
           <entry key="yaml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Dockerfile" value="15" />
-          <entry key="SmartyConfig" value="5" />
+          <entry key="SmartyConfig" value="10" />
           <entry key="YAML" value="3" />
         </counts>
       </usages-collector>
@@ -63,11 +66,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/packages/api_platform.yaml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/packages/nelmio_cors.yaml">
           <provider selected="true" editor-type-id="text-editor">
@@ -102,20 +100,20 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="681">
+            <state relative-caret-position="1683">
               <caret line="99" selection-start-line="99" selection-end-line="102" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docker/nginx/conf.d/default.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="37" column="15" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
+            <state relative-caret-position="221">
+              <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -125,13 +123,20 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docker/varnish/conf/default.vcl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-580" />
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>sql</find>
-      <find>varnish</find>
       <find>api_platform_varnish</find>
+      <find>varnish</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -141,8 +146,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/config/packages/doctrine.yaml" />
-        <option value="$PROJECT_DIR$/docker/nginx/conf.d/default.conf" />
         <option value="$PROJECT_DIR$/Dockerfile" />
+        <option value="$PROJECT_DIR$/docker/nginx/conf.d/default.conf" />
       </list>
     </option>
   </component>
@@ -258,6 +263,19 @@
               <item name="nginx" type="462c0819:PsiDirectoryNode" />
               <item name="conf.d" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="api-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="docker" type="462c0819:PsiDirectoryNode" />
+              <item name="varnish" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="api-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="docker" type="462c0819:PsiDirectoryNode" />
+              <item name="varnish" type="462c0819:PsiDirectoryNode" />
+              <item name="conf" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -298,12 +316,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1539339995752</updated>
-      <workItem from="1539339997041" duration="2063000" />
+      <workItem from="1539339997041" duration="3347000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2063000" />
+    <option name="totallyTimeSpent" value="3347000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -397,20 +415,25 @@
     <entry file="file://$PROJECT_DIR$/bin/console">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/docker/nginx/conf.d/default.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="15" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.dockerignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="681">
+        <state relative-caret-position="1683">
           <caret line="99" selection-start-line="99" selection-end-line="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/varnish/conf/default.vcl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-580" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/nginx/conf.d/default.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
         </state>
       </provider>
     </entry>
