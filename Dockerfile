@@ -96,9 +96,9 @@ CMD ["php-fpm"]
 #
 #COPY --from=api_platform_php /srv/api/public public/
 
-FROM httpd:2.4
+FROM  registry.access.redhat.com/rhscl/httpd-24-rhel7
 
-COPY docker/apache/httpd.conf /etc/apache2/httpd.conf
+COPY docker/apache/httpd.conf /etc/httpd.conf
 
 #COPY . /app/
 #COPY ./ /usr/local/apache2/htdocs/Example
