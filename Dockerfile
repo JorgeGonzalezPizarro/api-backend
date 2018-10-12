@@ -14,6 +14,7 @@ RUN apk add --no-cache \
 		gettext \
 		git \
 		postgresql-client \
+		 git mysql-client \
 	;
 
 ARG APCU_VERSION=5.1.12
@@ -30,6 +31,7 @@ RUN set -eux; \
 	docker-php-ext-install -j$(nproc) \
 		intl \
 		pdo_pgsql \
+		pdo_mysql \
 		zip \
 	; \
 	pecl install \
