@@ -63,7 +63,6 @@ RUN set -eux; \
 	composer clear-cache
 ENV PATH="${PATH}:/root/.composer/vendor/bin"
 
-WORKDIR /srv/api
 
 # build for production
 ARG APP_ENV=prod
@@ -89,13 +88,25 @@ RUN chmod +x /usr/local/bin/docker-entrypoint
 ENTRYPOINT ["docker-entrypoint"]
 CMD ["php-fpm"]
 #FROM nginx:${NGINX_VERSION}-alpine AS api_platform_nginx
-FROM bitnami/nginx:latest
+#FROM bitnami/nginx:latest
+#
+#COPY docker/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
+#
+#WORKDIR /srv/api
+#
+#COPY --from=api_platform_php /srv/api/public public/
 
-COPY docker/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
+FROM httpd:2.4
 
-WORKDIR /srv/api
+COPY httpd.conf /etc/apache2/httpd.conf
 
-COPY --from=api_platform_php /srv/api/public public/
+#COPY . /app/
+#COPY ./ /usr/local/apache2/htdocs/Example
+COPY ./ /var/www/
+
+EXPOSE 8080
+
+
 
 #FROM cooptilleuls/varnish:${VARNISH_VERSION}-alpine AS api_platform_varnish
 #
