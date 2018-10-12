@@ -98,7 +98,7 @@ CMD ["php-fpm"]
 
 FROM httpd:2.4
 
-COPY httpd.conf /etc/apache2/httpd.conf
+COPY docker/apache/httpd.conf /etc/apache2/httpd.conf
 
 #COPY . /app/
 #COPY ./ /usr/local/apache2/htdocs/Example
