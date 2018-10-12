@@ -1,9 +1,9 @@
 # the different stages of this Dockerfile are meant to be built into separate images
 # https://docs.docker.com/compose/compose-file/#target
 
-ARG PHP_VERSION=7.2
-ARG NGINX_VERSION=1.15
-ARG VARNISH_VERSION=6.0
+#ARG PHP_VERSION=7.2
+#ARG NGINX_VERSION=1.15
+#ARG VARNISH_VERSION=6.0
 
 FROM php:7.2-fpm-alpine AS api_platform_php
 
