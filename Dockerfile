@@ -80,7 +80,7 @@ RUN set -eux; \
 	composer dump-autoload --classmap-authoritative --no-dev; \
 	composer run-script --no-dev post-install-cmd; \
 	chmod +x bin/console; sync
-VOLUME /srv/api/var
+VOLUME /var/www/
 
 COPY docker/php/docker-entrypoint.sh /usr/local/bin/docker-entrypoint
 RUN chmod +x /usr/local/bin/docker-entrypoint
@@ -102,7 +102,7 @@ COPY docker/apache/httpd.conf /etc/httpd.conf
 
 #COPY . /app/
 #COPY ./ /usr/local/apache2/htdocs/Example
-COPY ./ /var/www/
+COPY ./ /var/www/html/
 
 EXPOSE 8080
 
