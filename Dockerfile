@@ -65,6 +65,7 @@ ENV PATH="${PATH}:/root/.composer/vendor/bin"
 
 
 # build for production
+ARG APP_ENV=prod
 
 # prevent the reinstallation of vendors at every changes in the source code
 COPY composer.json composer.lock ./
@@ -72,7 +73,7 @@ RUN set -eux; \
 	composer install --prefer-dist --no-dev --no-autoloader --no-scripts --no-progress --no-suggest; \
 	composer clear-cache
 
-COPY public/index1.php /var/www/html/
+COPY /public/index1.php /var/www/html/
 
 RUN set -eux; \
 	mkdir -p var/cache var/log; \
