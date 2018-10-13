@@ -98,7 +98,7 @@ CMD ["php-fpm"]
 
 FROM  registry.access.redhat.com/rhscl/httpd-24-rhel7
 
-#COPY docker/apache/httpd.conf /etc/httpd.conf
+COPY docker/apache/httpd.conf /etc/httpd/httpd.conf
 
 #COPY . /app/
 #COPY ./ /usr/local/apache2/htdocs/Example
