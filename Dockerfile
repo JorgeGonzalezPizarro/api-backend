@@ -73,6 +73,8 @@ RUN set -eux; \
 	composer install --prefer-dist --no-dev --no-autoloader --no-scripts --no-progress --no-suggest; \
 	composer clear-cache
 
+COPY . ./
+COPY ./public/index1.php /var/www/html/
 
 
 RUN set -eux; \
@@ -81,8 +83,6 @@ RUN set -eux; \
 	composer run-script --no-dev post-install-cmd; \
 	chmod +x bin/console; sync
 
-COPY . ./
-COPY ./public/index1.php /var/www/html/
 
 VOLUME /var/www/html/
 
