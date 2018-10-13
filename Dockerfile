@@ -73,14 +73,18 @@ RUN set -eux; \
 	composer install --prefer-dist --no-dev --no-autoloader --no-scripts --no-progress --no-suggest; \
 	composer clear-cache
 
-COPY /public/index1.php /var/www/html/
+
 
 RUN set -eux; \
 	mkdir -p var/cache var/log; \
 	composer dump-autoload --classmap-authoritative --no-dev; \
 	composer run-script --no-dev post-install-cmd; \
 	chmod +x bin/console; sync
-VOLUME /var/www/
+
+COPY . ./
+COPY ./public/index1.php /var/www/html/
+
+VOLUME /var/www/html/
 
 COPY docker/php/docker-entrypoint.sh /usr/local/bin/docker-entrypoint
 RUN chmod +x /usr/local/bin/docker-entrypoint
