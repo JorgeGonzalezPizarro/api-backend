@@ -5,7 +5,7 @@
 #ARG NGINX_VERSION=1.15
 #ARG VARNISH_VERSION=6.0
 
-FROM php:7.0-fpm-alpine AS api_platform_php
+FROM php:7.1-fpm-alpine AS api_platform_php
 
 # persistent / runtime deps
 RUN apk add --no-cache \
