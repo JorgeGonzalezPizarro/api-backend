@@ -98,13 +98,13 @@ CMD ["php-fpm"]
 
 FROM  registry.access.redhat.com/rhscl/httpd-24-rhel7
 
-COPY docker/apache/httpd.conf /etc/httpd.conf
+#COPY docker/apache/httpd.conf /etc/httpd.conf
 
 #COPY . /app/
 #COPY ./ /usr/local/apache2/htdocs/Example
 COPY ./ /var/www/html/
 
-EXPOSE 8080
+#EXPOSE 8080
 
 
 
