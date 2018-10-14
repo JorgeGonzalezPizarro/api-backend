@@ -95,21 +95,21 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                             $allow += $a;
                             goto not_api_greetings_get_collection;
                         }
-
+            
                         return $ret;
                         not_api_greetings_get_collection:
-
-                        // api_greetings_post_collection
+            
+                         // api_greetings_post_collection
                         $ret = $this->mergeDefaults(array('_route' => 'api_greetings_post_collection') + $matches, array('_controller' => 'api_platform.action.post_collection', '_format' => null, '_api_resource_class' => 'App\\Entity\\Greeting', '_api_collection_operation_name' => 'post'));
                         if (!isset(($a = array('POST' => 0))[$requestMethod])) {
                             $allow += $a;
                             goto not_api_greetings_post_collection;
                         }
-
+            
                         return $ret;
                         not_api_greetings_post_collection:
 
-                        break;
+                       break;
                     case 183:
                         $matches = array('id' => $matches[1] ?? null, '_format' => $matches[2] ?? null);
 
@@ -119,17 +119,17 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                             $allow += $a;
                             goto not_api_greetings_get_item;
                         }
-
+            
                         return $ret;
                         not_api_greetings_get_item:
-
-                        // api_greetings_delete_item
+            
+                         // api_greetings_delete_item
                         $ret = $this->mergeDefaults(array('_route' => 'api_greetings_delete_item') + $matches, array('_controller' => 'api_platform.action.delete_item', '_format' => null, '_api_resource_class' => 'App\\Entity\\Greeting', '_api_item_operation_name' => 'delete'));
                         if (!isset(($a = array('DELETE' => 0))[$requestMethod])) {
                             $allow += $a;
                             goto not_api_greetings_delete_item;
                         }
-
+            
                         return $ret;
                         not_api_greetings_delete_item:
 
@@ -139,11 +139,11 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                             $allow += $a;
                             goto not_api_greetings_put_item;
                         }
-
+            
                         return $ret;
                         not_api_greetings_put_item:
 
-                        break;
+                       break;
                     default:
                         $routes = array(
                             42 => array(array('_route' => 'api_entrypoint', '_controller' => 'api_platform.action.entrypoint', '_format' => '', '_api_respond' => '1', 'index' => 'index'), array('index', '_format'), null, null),
@@ -151,15 +151,15 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                             107 => array(array('_route' => 'api_jsonld_context', '_controller' => 'api_platform.jsonld.action.context', '_api_respond' => '1', '_format' => 'jsonld'), array('shortName', '_format'), null, null),
                             223 => array(array('_route' => '_twig_error_test', '_controller' => 'twig.controller.preview_error::previewErrorPageAction', '_format' => 'html'), array('code', '_format'), null, null),
                         );
-
+            
                         list($ret, $vars, $requiredMethods, $requiredSchemes) = $routes[$m];
-
+            
                         foreach ($vars as $i => $v) {
                             if (isset($matches[1 + $i])) {
                                 $ret[$v] = $matches[1 + $i];
                             }
                         }
-
+            
                         $hasRequiredScheme = !$requiredSchemes || isset($requiredSchemes[$context->getScheme()]);
                         if ($requiredMethods && !isset($requiredMethods[$canonicalMethod]) && !isset($requiredMethods[$requestMethod])) {
                             if ($hasRequiredScheme) {
@@ -171,7 +171,7 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                             $allowSchemes += $requiredSchemes;
                             break;
                         }
-
+            
                         return $ret;
                 }
 

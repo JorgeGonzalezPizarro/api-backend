@@ -1,3 +1,7 @@
+api_platform:
+    resource: .
+    type: api_platform
+    prefix: /
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
