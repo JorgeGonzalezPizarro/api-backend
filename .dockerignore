@@ -13,5 +13,5 @@
 .editorconfig
 .php_cs.cache
 docker/db/data/
+/vendor
 helm/
-var/

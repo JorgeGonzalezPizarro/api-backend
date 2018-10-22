@@ -9,7 +9,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * This is a dummy entity. Remove it!
  *
- * @ApiResource
+ * @ApiResource(routePrefix="/library")
  * @ORM\Entity
  */
 class Greeting

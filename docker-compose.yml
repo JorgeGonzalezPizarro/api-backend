@@ -1,0 +1,39 @@
+version: '3.4'
+
+services:
+  php:
+#    image: api-backend
+    build:
+      context: ./
+#      target: backend
+#    depends_on:
+#      - db
+    env_file:
+      - ./.env
+    # Comment out these volumes in production
+    volumes:
+      #- ./api:/srv/api:rw,cached
+      # If you develop on Linux, uncomment the following line to use a bind-mounted host directory instead
+       - .:/var/www:rw
+    ports:
+       - "8080:80"
+    depends_on:
+      - db
+
+  db:
+    image: mysql:5.7
+    environment:
+      - MYSQL_USER=${DATABASE_USER}
+      - MYSQL_DATABASE=${DATABASE_NAME}
+      - MYSQL_HOST=${DATABASE_HOST}
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+    volumes:
+      - ./docker/mysql/:/var/lib/mysql
+      # You may use a bind-mounted host directory instead, so that it is harder to accidentally remove the volume and lose all your data!
+      # - ./docker/db/data:/var/lib/postgresql/data:rw
+    ports:
+      - "3306:3306"
+
+
+#volumes:
+#  db-data: {}

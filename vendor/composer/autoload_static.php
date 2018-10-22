@@ -35,7 +35,6 @@ class ComposerStaticInit241f199d85d168d0a982b21bbba4252e
             'Symfony\\Component\\Routing\\' => 26,
             'Symfony\\Component\\PropertyInfo\\' => 31,
             'Symfony\\Component\\PropertyAccess\\' => 33,
-            'Symfony\\Component\\Process\\' => 26,
             'Symfony\\Component\\Inflector\\' => 28,
             'Symfony\\Component\\HttpKernel\\' => 29,
             'Symfony\\Component\\HttpFoundation\\' => 33,
@@ -50,7 +49,6 @@ class ComposerStaticInit241f199d85d168d0a982b21bbba4252e
             'Symfony\\Component\\Config\\' => 25,
             'Symfony\\Component\\Cache\\' => 24,
             'Symfony\\Component\\Asset\\' => 24,
-            'Symfony\\Bundle\\WebServerBundle\\' => 31,
             'Symfony\\Bundle\\TwigBundle\\' => 26,
             'Symfony\\Bundle\\SecurityBundle\\' => 30,
             'Symfony\\Bundle\\FrameworkBundle\\' => 31,
@@ -92,8 +90,8 @@ class ComposerStaticInit241f199d85d168d0a982b21bbba4252e
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'Webmozart\\Assert\\' => 
         array (
@@ -142,10 +140,6 @@ class ComposerStaticInit241f199d85d168d0a982b21bbba4252e
         'Symfony\\Component\\PropertyAccess\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/property-access',
-        ),
-        'Symfony\\Component\\Process\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/process',
         ),
         'Symfony\\Component\\Inflector\\' => 
         array (
@@ -202,10 +196,6 @@ class ComposerStaticInit241f199d85d168d0a982b21bbba4252e
         'Symfony\\Component\\Asset\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/asset',
-        ),
-        'Symfony\\Bundle\\WebServerBundle\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/web-server-bundle',
         ),
         'Symfony\\Bundle\\TwigBundle\\' => 
         array (
@@ -273,10 +263,10 @@ class ComposerStaticInit241f199d85d168d0a982b21bbba4252e
         ),
         'Doctrine\\Common\\' => 
         array (
-            0 => __DIR__ . '/..' . '/doctrine/reflection/lib/Doctrine/Common',
+            0 => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common',
             1 => __DIR__ . '/..' . '/doctrine/event-manager/lib/Doctrine/Common',
             2 => __DIR__ . '/..' . '/doctrine/persistence/lib/Doctrine/Common',
-            3 => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common',
+            3 => __DIR__ . '/..' . '/doctrine/reflection/lib/Doctrine/Common',
         ),
         'Doctrine\\Bundle\\DoctrineCacheBundle\\' => 
         array (
